@@ -3,36 +3,64 @@ package com.example.myfittrackapp.ui.theme
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
-)
+import androidx.compose.ui.unit.dp
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
+    primary = FitnessGreen,
     onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    secondary = FitnessBlue,
+    background = FitnessBackground,
+    surface = Color.White,
+    error = Color(0xFFE74C3C)
 )
 
+private val DarkColorScheme = darkColorScheme(
+    primary = FitnessGreenDark,
+)
+
+@Composable
+fun LoginButton(
+    text: String,
+    onClick : () -> Unit,
+    modifier : Modifier = Modifier,
+    enabled : Boolean = true,
+){
+    Button(
+        onClick = onClick,
+        modifier = modifier.fillMaxWidth(),
+        enabled = enabled,
+        shape = RoundedCornerShape(8.dp),
+
+    ) { Text(text) }
+}
+@Composable
+fun PrimaryButton(
+    text: String,
+    onClick : ()-> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+){
+    Button(
+        onClick = onClick,
+        modifier = modifier.fillMaxWidth(),
+        enabled = enabled,
+    ){
+        Text(text)
+    }
+}
 @Composable
 fun MyFitTrackAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

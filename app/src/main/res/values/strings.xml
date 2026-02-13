@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyFitTrackApp</string>
+    <string name="application_name">MyFitTrack</string>
 </resources>
