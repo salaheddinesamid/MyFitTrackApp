@@ -16,13 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.TestActivity1"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            android:exported="false" >
         </activity>
 
         <service
@@ -31,16 +25,15 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/application_name"
             android:theme="@style/Theme.MyFitTrackApp">
-            <!--
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            !-->
         </activity>
     </application>
 

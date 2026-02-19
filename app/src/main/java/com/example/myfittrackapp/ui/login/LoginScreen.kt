@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -26,10 +27,23 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.myfittrackapp.R
 import com.example.myfittrackapp.ui.theme.LoginButton
 import com.example.myfittrackapp.ui.theme.MyFitTrackAppTheme
 
+@Composable
+fun LoginScreen(
+    navController : NavController
+){
+    Scaffold()
+         {
+             LoginComposable(
+                 onLoginSuccess = { navController.navigate("home") },
+                 onRegisterClick = { navController.navigate("register") }
+             )
+         }
+}
 @Composable
 fun LoginComposable(
     onLoginSuccess: () -> Unit,
