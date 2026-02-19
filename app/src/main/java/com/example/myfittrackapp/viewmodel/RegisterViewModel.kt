@@ -43,7 +43,16 @@ class RegisterViewModel {
                 1.20 * bmi + 0.23 * a - 10.8
             }
         }
-
     }
 
+    // verify strong password
+    fun verifyPassword () : Boolean{
+        if(password.length < 8){
+            return false
+        }
+        if(password != confirmPassword){
+            return false
+        }
+        return true
+    }
 }

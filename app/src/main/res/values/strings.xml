@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="application_name">MyFitTrack</string>
+    <string name="registration_label">Create Account</string>
+    <string name="registration_sub_label">Sign up and take the first step toward your goals</string>
 </resources>
